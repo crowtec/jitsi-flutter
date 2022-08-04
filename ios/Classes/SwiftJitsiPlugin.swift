@@ -2,7 +2,7 @@ import Flutter
 import UIKit
 import JitsiMeetSDK
 
-public class SwiftJitsiPlugin: NSObject, FlutterPlugin {
+public class SwiftJitsiPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
   var window: UIWindow?
   var uiVC : UIViewController
   var eventSink : FlutterEventSink?
