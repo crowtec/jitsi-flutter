@@ -11,9 +11,6 @@ class JitsiOptions {
   final String room;
   String? subject;
   String? token;
-  bool? audioMuted;
-  bool? audioOnly;
-  bool? videoMuted;
   String? userDisplayName;
   String? userEmail;
   String? iosAppBarRGBAColor;
@@ -28,16 +25,13 @@ class JitsiOptions {
       featureFlagsWithStrings[key.value] = value;
     });
 
-    print(featureFlagsWithStrings);
-
     return featureFlagsWithStrings;
   }
 
   @override
   String toString() {
     return 'JitsiOptions{room: $room, serverURL: $serverURL, '
-        'subject: $subject, token: $token, audioMuted: $audioMuted, '
-        'audioOnly: $audioOnly, videoMuted: $videoMuted, '
+        'subject: $subject, token: $token, '
         'userDisplayName: $userDisplayName, userEmail: $userEmail, '
         'iosAppBarRGBAColor :$iosAppBarRGBAColor, featureFlags: $featureFlags }';
   }

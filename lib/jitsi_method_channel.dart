@@ -30,10 +30,8 @@ class MethodChannelJitsi extends JitsiPlatform {
     JitsiOptions options, {
     JitsiListener? listener,
   }) async {
-    print("jointMeeting");
     // Attach a listener if it exists. The key is based on the serverURL + room
     if (listener != null) {
-      print("hasListener");
       String serverURL = options.serverURL ?? "https://meet.jit.si";
       String key;
       if (serverURL.endsWith("/")) {
@@ -46,7 +44,6 @@ class MethodChannelJitsi extends JitsiPlatform {
           ifAbsent: () => listener);
       initialize();
     }
-    print("before invoke");
 
     return await methodChannel
         .invokeMethod<String>('joinMeeting', {
@@ -54,9 +51,6 @@ class MethodChannelJitsi extends JitsiPlatform {
           'serverURL': options.serverURL?.trim(),
           'subject': options.subject,
           'token': options.token,
-          'audioMuted': options.audioMuted,
-          'audioOnly': options.audioOnly,
-          'videoMuted': options.videoMuted,
           'featureFlags': options.getFeatureFlags(),
           'userDisplayName': options.userDisplayName,
           'userEmail': options.userEmail,

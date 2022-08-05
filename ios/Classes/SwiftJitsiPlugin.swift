@@ -62,24 +62,6 @@ public class SwiftJitsiPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
               if let avatarURL = myArgs["userAvatarURL"] as? String {
                   self.jitsiViewController?.jistiMeetUserInfo.avatar = URL(string: avatarURL);
               }
-              //                    let avatar = myArgs["userAvatarURL"] as? String,
-              //                    let avatarURL  = URL(string: avatar)
-              //                    jitsiViewController?.jistiMeetUserInfo.avatar = avatarURL;
-
-              if let audioOnly = myArgs["audioOnly"] as? Int {
-                  let audioOnlyBool = audioOnly > 0 ? true : false
-                  self.jitsiViewController?.audioOnly = audioOnlyBool;
-              }
-
-              if let audioMuted = myArgs["audioMuted"] as? Int {
-                  let audioMutedBool = audioMuted > 0 ? true : false
-                  self.jitsiViewController?.audioMuted = audioMutedBool;
-              }
-
-              if let videoMuted = myArgs["videoMuted"] as? Int {
-                  let videoMutedBool = videoMuted > 0 ? true : false
-                  self.jitsiViewController?.videoMuted = videoMutedBool;
-              }
 
               if let featureFlags = myArgs["featureFlags"] as? Dictionary<String, Any>
               {

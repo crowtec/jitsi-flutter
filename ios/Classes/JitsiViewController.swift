@@ -12,9 +12,6 @@ class JitsiViewController: UIViewController {
     var roomName:String? = nil
     var serverUrl:URL? = nil
     var subject:String? = nil
-    var audioOnly:Bool? = false
-    var audioMuted: Bool? = false
-    var videoMuted: Bool? = false
     var token:String? = nil
     var featureFlags: Dictionary<String, Any>? = Dictionary();
     
@@ -65,9 +62,6 @@ class JitsiViewController: UIViewController {
             builder.serverURL = self.serverUrl
             builder.setSubject(self.subject ?? "")
             builder.userInfo = self.jistiMeetUserInfo
-            builder.setFeatureFlag("audio-only.enabled", withBoolean: self.audioOnly ?? false)
-            builder.setFeatureFlag("audio-mute.enabled", withBoolean: self.audioMuted ?? false)
-            builder.setFeatureFlag("video-mute.enabled", withBoolean: self.videoMuted ?? false)
             builder.token = self.token
             
             self.featureFlags?.forEach{ key,value in

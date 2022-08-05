@@ -1,6 +1,6 @@
 name: jitsi
 description: A new Flutter plugin project.
-version: 0.0.2
+version: 1.0.0
 homepage: https://github.com/crowtec/jitsi-flutter
 
 environment:
