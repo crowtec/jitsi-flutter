@@ -15,6 +15,7 @@ class JitsiOptions {
   String? userEmail;
   String? iosAppBarRGBAColor;
   String? userAvatarURL;
+  bool? audioMuted;
 
   Map<FeatureFlag, bool> featureFlags = HashMap();
 
