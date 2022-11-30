@@ -32,7 +32,7 @@ class JitsiOptions {
   @override
   String toString() {
     return 'JitsiOptions{room: $room, serverURL: $serverURL, '
-        'subject: $subject, token: $token, '
+        'subject: $subject, token: $token, audioMuted: $audioMuted '
         'userDisplayName: $userDisplayName, userEmail: $userEmail, '
         'iosAppBarRGBAColor :$iosAppBarRGBAColor, featureFlags: $featureFlags }';
   }

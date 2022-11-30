@@ -140,7 +140,7 @@ class JitsiPlugin() : FlutterPlugin, MethodCallHandler, ActivityAware {
         val optionsBuilder = JitsiMeetConferenceOptions.Builder()
 
         // Set meeting options
-        optionsBuilder.setServerURL(serverURL).setRoom(room).setSubject(call.argument("subject")).setToken(call.argument("token")).setUserInfo(userInfo)
+        optionsBuilder.setServerURL(serverURL).setRoom(room).setSubject(call.argument("subject")).setToken(call.argument("token")).setAudioMuted(call.argument("audioMuted") ?: false).setUserInfo(userInfo)
 
         // Add feature flags into options, reading given Map
         if (call.argument<HashMap<String, Any>?>("featureFlags") != null) {

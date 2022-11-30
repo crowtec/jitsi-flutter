@@ -12,6 +12,7 @@ class JitsiViewController: UIViewController {
     var roomName:String? = nil
     var serverUrl:URL? = nil
     var subject:String? = nil
+    var audioMuted: Bool? = false
     var token:String? = nil
     var featureFlags: Dictionary<String, Any>? = Dictionary();
     
@@ -62,6 +63,7 @@ class JitsiViewController: UIViewController {
             builder.serverURL = self.serverUrl
             builder.setSubject(self.subject ?? "")
             builder.userInfo = self.jistiMeetUserInfo
+            builder.setFeatureFlag("audio-mute.enabled", withBoolean: self.audioMuted ?? false)
             builder.token = self.token
             
             self.featureFlags?.forEach{ key,value in
