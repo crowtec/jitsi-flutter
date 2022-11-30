@@ -17,10 +17,10 @@ class JitsiOptions {
   String? userAvatarURL;
   bool? audioMuted;
 
-  Map<FeatureFlag, dynamic> featureFlags = HashMap();
+  Map<FeatureFlag, bool> featureFlags = HashMap();
 
-  Map<String?, dynamic> getFeatureFlags() {
-    Map<String?, dynamic> featureFlagsWithStrings = HashMap();
+  Map<String?, bool> getFeatureFlags() {
+    Map<String?, bool> featureFlagsWithStrings = HashMap();
 
     featureFlags.forEach((key, value) {
       featureFlagsWithStrings[key.value] = value;
