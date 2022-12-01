@@ -195,7 +195,7 @@ enum FeatureFlag {
    * the server configuration.
    * Default: (unset).
    */
-  RESOLUTION('16:9'),
+  RESOLUTION('16/9'),
 
   /**
    * Flag indicating if the security options button should be enabled.
