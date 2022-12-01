@@ -195,7 +195,7 @@ enum FeatureFlag {
    * the server configuration.
    * Default: (unset).
    */
-  RESOLUTION('resolution'),
+  RESOLUTION('16:9'),
 
   /**
    * Flag indicating if the security options button should be enabled.
@@ -243,7 +243,9 @@ enum FeatureFlag {
    * Flag indicating if the welcome page should be enabled.
    * Default: disabled (false).
    */
-  WELCOME_PAGE_ENABLED('welcomepage.enabled');
+  WELCOME_PAGE_ENABLED('welcomepage.enabled'),
+
+  VIDEO_LAYOUT_FIT('both');
 
   const FeatureFlag(this.value);
   final String value;
