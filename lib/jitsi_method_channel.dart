@@ -55,6 +55,7 @@ class MethodChannelJitsi extends JitsiPlatform {
           'userDisplayName': options.userDisplayName,
           'userEmail': options.userEmail,
           'iosAppBarRGBAColor': options.iosAppBarRGBAColor,
+          'audioMuted': options.audioMuted
         })
         .then((message) => JitsiResponse(isSuccess: true, message: message))
         .catchError(

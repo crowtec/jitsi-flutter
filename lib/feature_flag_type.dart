@@ -243,7 +243,13 @@ enum FeatureFlag {
    * Flag indicating if the welcome page should be enabled.
    * Default: disabled (false).
    */
-  WELCOME_PAGE_ENABLED('welcomepage.enabled');
+  WELCOME_PAGE_ENABLED('welcomepage.enabled'),
+
+  /**
+   * Flag indicating if settings should be enabled.
+   * Default: enabled (true).
+   */
+  SETTINGS_ENABLED('settings.enabled');
 
   const FeatureFlag(this.value);
   final String value;

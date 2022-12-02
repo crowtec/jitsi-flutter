@@ -15,6 +15,7 @@ class JitsiOptions {
   String? userEmail;
   String? iosAppBarRGBAColor;
   String? userAvatarURL;
+  bool? audioMuted;
 
   Map<FeatureFlag, bool> featureFlags = HashMap();
 
@@ -31,7 +32,7 @@ class JitsiOptions {
   @override
   String toString() {
     return 'JitsiOptions{room: $room, serverURL: $serverURL, '
-        'subject: $subject, token: $token, '
+        'subject: $subject, token: $token, audioMuted: $audioMuted '
         'userDisplayName: $userDisplayName, userEmail: $userEmail, '
         'iosAppBarRGBAColor :$iosAppBarRGBAColor, featureFlags: $featureFlags }';
   }

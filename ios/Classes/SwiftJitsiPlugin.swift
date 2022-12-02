@@ -50,6 +50,11 @@ public class SwiftJitsiPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
               let displayName = myArgs["userDisplayName"] as? String
               let email = myArgs["userEmail"] as? String
               let token = myArgs["token"] as? String
+              
+              if let audioMuted = myArgs["audioMuted"] as? Int {
+                  let audioMutedBool = audioMuted > 0 ? true : false
+                  self.jitsiViewController?.audioMuted = audioMutedBool;
+              }
 
 
               self.jitsiViewController?.roomName = roomName;
@@ -57,6 +62,7 @@ public class SwiftJitsiPlugin: NSObject, FlutterPlugin, FlutterStreamHandler {
               self.jitsiViewController?.jistiMeetUserInfo.displayName = displayName;
               self.jitsiViewController?.jistiMeetUserInfo.email = email;
               self.jitsiViewController?.token = token;
+              self.JitsiViewController?.audioMuted = audioMuted;
 
 
               if let avatarURL = myArgs["userAvatarURL"] as? String {
